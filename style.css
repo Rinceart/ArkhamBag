@@ -5,39 +5,46 @@
   --color_white: #F5F5F5;
   --color_baige_light: #ece8d8;
   --color_baige_dark: #DDD5C0;
+  --corner_radius: 20px;
+}
+
+@font-face {
+  font-family: "Birmingham";
+  src: url(./font_birmingham.ttf) format("truetype");
 }
 
 h1, h2, h3, p {
   margin: 0;
   padding: 0;
+  line-height: 1.5em;
+  text-transform: none;
+  text-decoration: none;
 }
 
 h1 {
-  font-size: 30px;
-  font-family: "Courier New", monospace;
-  font-weight: 700;
+  font-size: 28px;
+  font-family: "Birmingham", serif;
   color: var(--color_dark_green);
 }
 
 h2 {
-  font-size: 30px;
-  font-family: "Courier New", monospace;
-  font-weight: 700;
+  font-size: 24px;
+  font-family: "Birmingham", serif;
   color: var(--color_dark_green);
 }
 
 h3 {
-  font-size: 24px;
-  font-family: "Courier New", monospace;
+  font-size: 20px;
+  font-family: Garamond, serif;
   font-weight: 700;
   color: var(--color_dark_green);
 }
 
 p {
   font-size: 16px;
-  font-family: "Courier New", monospace;
+  font-family: Garamond, serif;
   /* font-family: Helvetica, sans-serif; */
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color_black);
 }
 
@@ -53,11 +60,10 @@ p {
 }
 
 .button {
+  min-height: 44px;
   font-size: 16px;
-  font-family: "Courier New", monospace;
+  font-family: Garamond, serif;
   font-weight: 700;
-  text-transform: none;
-  text-decoration: none;
 }
 
 .textarea {
