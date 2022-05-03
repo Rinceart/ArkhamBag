@@ -1,0 +1,125 @@
+:root {
+  --color_dark_green: #003700;
+  --color_dark_blue: #103050;
+  --color_black: #101010;
+  --color_white: #F5F5F5;
+  --color_baige_light: #ece8d8;
+  --color_baige_dark: #DDD5C0;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  color: var(--color_dark_green);
+}
+
+h2 {
+  font-size: 30px;
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  color: var(--color_dark_green);
+}
+
+h3 {
+  font-size: 24px;
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  color: var(--color_dark_green);
+}
+
+p {
+  font-size: 16px;
+  font-family: "Courier New", monospace;
+  /* font-family: Helvetica, sans-serif; */
+  font-weight: 600;
+  color: var(--color_black);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  fill: var(--color_dark_green);
+}
+
+.shadow_normal {
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.25);
+}
+
+.button {
+  font-size: 16px;
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.textarea {
+  color: var(--color_black);
+  cursor: auto;
+  padding: 0.5rem;
+  font-family: Poppins;
+  border-color: var(--color_black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--color_white);
+}
+
+.input {
+  color: var(--color_black);
+  cursor: auto;
+  padding: 0.5rem 1rem;
+  font-family: Poppins;
+  border-color: var(--color_black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--color_white);
+}
+
+.subheading {
+  font-size: 1.6rem;
+  font-family: Poppins;
+  font-weight: 400;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.heading {
+  font-size: 3rem;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: 1.55;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.content {
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 1.55;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.collapsible_button {
+  width: 100%;
+  cursor: pointer;
+  height: 100px;
+}
+
+.collapsible_content {
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+
+

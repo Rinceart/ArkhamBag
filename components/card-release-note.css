@@ -1,0 +1,18 @@
+.card-release-note {
+  width: 100%;
+  padding: 30px;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+  background-color: var(--color_baige_light);
+}
+.card-release-note-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 30px;
+}
