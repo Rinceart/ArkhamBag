@@ -58,125 +58,118 @@
   <body>
     <div>
 
-      <div class="landing-page-container">
-        <div class="landing-page-top-container">
-          <nav data-role="Header" id="headerNav" class="navbar">
-            <div class="container_logo">
-              <img class="logo_small" 
-                alt="The app's logo, a styalizes letter A on a green and baige background" 
-                src="./public/appicon60@2x.png" />
-              <h1 style="color: var(--color_baige_light)">Arkham Bag</h1>
-            </div>
-            <div class="nav_menu_container">
-              <a href="#section_about" class="nav_menu_item">About</a>
-              <a href="#section_releases" class="nav_menu_item">Release Notes</a>
-              <a href="#section_legal" class="nav_menu_item">Legal</a>
-              <a href="#section_contact" class="nav_menu_item">Contact</a>
-            </div>
-            <button>
-              <img class="icon_burger" scr="/public/iconMenu.svg" alt="Hamburger menu icon"/>
-            </button>>
-            <div data-type="MobileMenu" class="landing-page-mobile-menu">
-              <div class="landing-page-nav">
-                <div class="landing-page-top">
-                  <div class="landing-page-container-logo1">
-                    <img
-                      alt="image"
-                      src="./public/appicon60@2x.png"
-                      class="landing-page-image1"
-                    />
-                    <h1 style="color: var(--color_baige_light)">Arkham Bag</h1>
-                  </div>
-                  <div
-                    data-type="CloseMobileMenu"
-                    class="landing-page-close-menu"
-                  >
-                    <svg viewBox="0 0 1024 1024" class="landing-page-icon3">
-                      <path
-                        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
-                      ></path>
-                    </svg>
-                  </div>
+      <div class="container_page flex_column" style="gap: 0px;">
+
+        <!----- ----- HERO SECTION ----- ----->
+        <div class="container_hero">
+          
+          <!----- ----- Navigation ----- ----->
+          <div data-role="Header" id="headerNav" class="navigation container_stretched flex_column">
+
+              <nav class="container_middle flex_row nav_bar">
+                <div class="flex_row">
+                  <img class="logo_small" 
+                    alt="The app's logo, a styalizes letter A on a green and baige background" 
+                    src="./public/appicon60@2x.png" />
+                  <h1>Arkham Bag</h1>
                 </div>
-                <div class="landing-page-nav-menu1">
-                  <a href="#section_about" class="nav_menu_item">About</a>
-                  <a href="#section_releases" class="nav_menu_item">Release Notes</a>
-                  <a href="#section_legal" class="nav_menu_item">Legal</a>
-                  <a href="#section_contact" class="nav_menu_item">Contact</a>
+
+                <div class="nav_menu flex_row" style="gap: var(--padding_medium)">
+                  <a href="#section_about" class="nav_item">About</a>
+                  <a href="#section_releases" class="nav_item">Release Notes</a>
+                  <a href="#section_legal" class="nav_item">Legal</a>
+                  <a href="#section_contact" class="nav_item">Contact</a>
                 </div>
+
+                <button class="btn_menu" id="btnMenu" onclick="openMobileMenu()"></button>
+                <button class="btn_close" id="btnClose" onclick="closeMobileMenu()"></button>
+              </nav>
+
+              <div data-type="MobileMenu" id="mobileMenu" class="container_mobile_menu">
+                <a href="#section_about" class="nav_item" onclick="closeMobileMenu()">About</a>
+                <a href="#section_releases" class="nav_item" onclick="closeMobileMenu()">Release Notes</a>
+                <a href="#section_legal" class="nav_item" onclick="closeMobileMenu()">Legal</a>
+                <a href="#section_contact" class="nav_item" onclick="closeMobileMenu()">Contact</a>
               </div>
-            </div>
-          </nav>
-          <div class="landing-page-hero">
-            <div class="landing-page-container-hero">
-              <a
-                href="https://apps.apple.com/us/app/arkham/id1153235167?mt=8"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="landing-page-link8"
-              >
+
+          </div>
+
+          <!----- ----- Hero content ----- ----->
+          <div class="container_stretched flex_column content_hero">
+            <div class="container_middle flex_column" style="align-items: flex-start;  gap: var(--padding_small)">
+              <a href="https://apps.apple.com/us/app/arkham/id1153235167?mt=8" target="_blank">
                 <img
                   alt="image"
                   src="./public/downloadAppStoreLight.png"
-                  class="landing-page-image2"
+                  class="image_app_store"
                 />
               </a>
-              <span class="landing-page-text02">
-                Version 1.1 is available right now!
-              </span>
+              <p style="color: white">Version 1.1 is available right now!</p>
             </div>
           </div>
-          <div class="landing-page-menu-overlay"></div>
+          
+          <div class="hero_overlay"></div>
+
         </div>
-        <div class="landing-page-main">
 
-          <div id="section_about" class="container_about">
+        <!----- ----- Page body starts ----- ----->
+        <div class="flex_column" style="width: 100%; gap: 0px;">
 
-            <div class="stretch_center">
-              <h2>About the App</h2>
-              <p class="label_description">
-                Arkham Bag is a chaos bag simulator for Arkham Horror: The Card
-                Game, based on H. P. Lovecraft&apos;s Cthulhu mythos. The app
-                provides a quick and easy way to simulate the game&apos;s chaos
-                bag, supporting game mechanics all the way to the Edge of the
-                Earth campaign. Arkham Bag also contains quick access to player
-                aid in the form of phase sequences with player windows.</p>
-            </div>
-            
-            <div class="content_gallery">
-              <div class="card_gallery shadow_normal">
-                <img
-                  alt="Screenshot showing the bag view with various tokens"
-                  src="./public/appImage01BagScreen.jpg"
-                  class="card_gallery_image"
-                />
+          <!----- ----- About section starts ----- ----->
+          <div id="section_about" class="container_stretched light flex_column">
+            <div class="container_middle flex_column">
+
+              <div class="flex_column" style="gap: 0px">
+                <h2>About the App</h2>
+                <p class="label_description">
+                  Arkham Bag is a chaos bag simulator for Arkham Horror: The Card
+                  Game, based on H. P. Lovecraft&apos;s Cthulhu mythos. The app
+                  provides a quick and easy way to simulate the game&apos;s chaos
+                  bag, supporting game mechanics all the way to the Edge of the
+                  Earth campaign. Arkham Bag also contains quick access to player
+                  aid in the form of phase sequences with player windows.</p>
               </div>
-              <div class="card_gallery shadow_normal">
-                <img
-                  alt="Screenshot showing the phase seqence and player window overlay"
-                  src="./public/appImage02SequenceOverlay.jpg"
-                  class="card_gallery_image"
-                />
+              
+              <div class="content_gallery flex_grid">
+                <div class="card_gallery shadow_normal">
+                  <img
+                    alt="Screenshot showing the bag view with various tokens"
+                    src="./public/appImage01BagScreen.jpg"
+                    class="card_gallery_image"
+                  />
+                </div>
+
+                <div class="card_gallery shadow_normal">
+                  <img
+                    alt="Screenshot showing the phase seqence and player window overlay"
+                    src="./public/appImage02SequenceOverlay.jpg"
+                    class="card_gallery_image"
+                  />
+                </div>
+
+                <div class="card_gallery shadow_normal">
+                  <img
+                    alt="Screenshot showing the bag selection screen"
+                    src="./public/appImage03BagsList.jpg"
+                    class="card_gallery_image"
+                  />
+                </div>
               </div>
-              <div class="card_gallery shadow_normal">
-                <img
-                  alt="Screenshot showing the bag selection screen"
-                  src="./public/appImage03BagsList.jpg"
-                  class="card_gallery_image"
-                />
-              </div>
+
             </div>
           </div>
-          <!-- Release notes -->
-          <div id="section_releases" class="wrapper_release_notes stretch_center" >
-            <div class="container_release_notes stretch_center">
+          <!----- ----- About section ends ----- ----->
 
-              <div class="stretch_center">
+          <!----- ----- Release notes start ----- ----->
+          <div id="section_releases" class="container_stretched dark flex_column" >
+            <div class="container_middle flex_column">
+
+              <div class="flex_column" style="gap: 0px">
                 <h2>Release Notes</h2>
                 <p class="label_description"> Here, you can find the latest feature releases and their content.</p>
               </div>
 
-              <div class="content_release_notes">
+              <div class="content_release_notes flex_grid">
 
                 <div class="card_release_note shadow_normal">
                   <div class="card_release_note_header">
@@ -233,13 +226,16 @@
               </div>
             </div>
           </div>
-          <!-- Legal -->
+          <!----- ----- Release notes ends ----- ----->
+
+          <!----- ----- Legal section start ----- ----->
           <div id="section_legal" class="landing-page-container-legal">
-            <h1 class="landing-page-text05">Legal</h1>
-            <span class="landing-page-text06">
-              Here, you can find our Terms and Conditions and our Privacy
-              Policy.
-            </span>
+
+            <div class="flex_column" style="gap: 0px">
+              <h2>Legal</h2>
+              <p class="label_description"> Here, you can find our Terms and Conditions and our Privacy Policy.</p>
+            </div>
+
             <div class="landing-page-content-legal">
               <div class="collapsible-collepsable">
                 <button class="collapsible-button button collapsible_button">
@@ -251,65 +247,75 @@
               </div>
             </div>
           </div>
-          <div id="section_contact" class="landing-page-container-contact">
-            <h1 class="landing-page-text07">Contact</h1>
-            <span class="landing-page-text08">
-              Fill out the below form if you need to contact us!
-            </span>
-            <form class="landing-page-form">
-              <div class="landing-page-input-name">
-                <span>
-                  <span class="landing-page-text09">*</span>
-                  <span>Your name</span>
-                </span>
-                <input
-                  type="text"
-                  required
-                  placeholder="Jane Doe"
-                  class="landing-page-input-name1 input"
-                />
+          <!----- ----- Legal section ends ----- ----->
+
+          <!----- ----- Contact section start ----- ----->
+          <div id="section_contact" class="container_stretched dark flex_column">
+            <div class="container_middle flex_column">
+
+              <div class="flex_column" style="gap: 0px">
+                <h2>Contact</h2>
+                <p class="label_description"> Fill out the form below if you need to contact us! If you are reporting a bug, please make sure you are including steps to reproduce it.</p>
               </div>
-              <div class="landing-page-input-address">
-                <span>
-                  <span class="landing-page-text11">*</span>
-                  <span class="landing-page-text12">Your email address</span>
-                </span>
-                <input
-                  type="text"
-                  required
-                  placeholder="your.name@company.com"
-                  class="landing-page-input-email input"
-                />
-              </div>
-              <div class="landing-page-label-subject">
-                <span><span class="landing-page-text13">Subject</span></span>
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  class="landing-page-input-subject input"
-                />
-              </div>
-              <div class="landing-page-container1">
-                <span>
-                  <span class="landing-page-text14">You message</span>
-                </span>
-                <textarea
-                  placeholder="Type your message here..."
-                  class="landing-page-textarea textarea"
-                ></textarea>
-              </div>
-              <button class="landing-page-button button">
-                <span class="landing-page-text15">
-                  <span>Send</span>
-                  <span class="landing-page-text17"></span>
-                  <span></span>
-                </span>
-              </button>
-            </form>
+              
+              <form class="container_contact flex_column">
+                <div class="landing-page-input-name">
+                  <span>
+                    <span class="landing-page-text09">*</span>
+                    <span>Your name</span>
+                  </span>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Jane Doe"
+                    class="landing-page-input-name1 input"
+                  />
+                </div>
+                <div class="landing-page-input-address">
+                  <span>
+                    <span class="landing-page-text11">*</span>
+                    <span class="landing-page-text12">Your email address</span>
+                  </span>
+                  <input
+                    type="text"
+                    required
+                    placeholder="your.name@company.com"
+                    class="landing-page-input-email input"
+                  />
+                </div>
+                <div class="landing-page-label-subject">
+                  <span><span class="landing-page-text13">Subject</span></span>
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    class="landing-page-input-subject input"
+                  />
+                </div>
+                <div class="landing-page-container1">
+                  <span>
+                    <span class="landing-page-text14">You message</span>
+                  </span>
+                  <textarea
+                    placeholder="Type your message here..."
+                    class="landing-page-textarea textarea"
+                  ></textarea>
+                </div>
+                <button class="landing-page-button button">
+                  <span class="landing-page-text15">
+                    <span>Send</span>
+                    <span class="landing-page-text17"></span>
+                    <span></span>
+                  </span>
+                </button>
+              </form>
+            </div>
           </div>
+          <!----- ----- Contact section ends ----- ----->
         </div>
+
+        <!----- ----- FOOTER ----- ----->
         <div class="landing-page-footer">
-          <div class="landing-page-menu">
+          <div class="content_footer">
             <h4 class="landing-page-label-logo">Arkham Bag</h4>
             <p class="landing-page-label-copyright">
               Copyright © 2022, Gergely E. Kovacs

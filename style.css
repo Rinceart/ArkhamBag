@@ -1,10 +1,14 @@
 :root {
   --color_dark_green: #003700;
   --color_dark_blue: #103050;
-  --color_black: #101010;
+  --color_dark_gray: #101010;
+  --color_black: #040404;
   --color_white: #F5F5F5;
   --color_baige_light: #ece8d8;
   --color_baige_dark: #DDD5C0;
+  --padding_small: 15px;
+  --padding_medium: 30px;
+  --padding_large: 60px;
   --corner_radius: 20px;
 }
 
@@ -24,7 +28,7 @@ h1, h2, h3, p {
 h1 {
   font-size: 28px;
   font-family: "Birmingham", serif;
-  color: var(--color_dark_green);
+  color: var(--color_baige_light);
 }
 
 h2 {
@@ -43,27 +47,28 @@ h3 {
 p {
   font-size: 16px;
   font-family: Garamond, serif;
-  /* font-family: Helvetica, sans-serif; */
   font-weight: 400;
   color: var(--color_black);
+}
+
+button {
+  min-height: 42px;
+  min-width: 42px;
+  font-size: 16px;
+  font-family: Garamond, serif;
+  font-weight: 700;
 }
 
 .icon {
   width: 32px;
   height: 32px;
   flex-shrink: 0;
+  display: inline-block;
   fill: var(--color_dark_green);
 }
 
 .shadow_normal {
   box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.25);
-}
-
-.button {
-  min-height: 44px;
-  font-size: 16px;
-  font-family: Garamond, serif;
-  font-weight: 700;
 }
 
 .textarea {
@@ -124,7 +129,7 @@ p {
   display: none;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.25s ease-out;
 }
 
 
