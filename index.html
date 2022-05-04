@@ -58,43 +58,58 @@
   <body>
     <div>
 
-      <div class="container_page flex_column" style="gap: 0px;">
+      <div id="home" class="container_page flex_column" style="gap: 0px;">
 
-        <!----- ----- HERO SECTION ----- ----->
-        <div class="container_hero">
-          
-          <!----- ----- Navigation ----- ----->
-          <div data-role="Header" id="headerNav" class="navigation container_stretched flex_column">
+        <!----- ----- Navigation ----- ----->
+        <div id="topNav" class="container_stretched flex_column top_nav">
 
-              <nav class="container_middle flex_row nav_bar">
-                <div class="flex_row">
-                  <img class="logo_small" 
-                    alt="The app's logo, a styalizes letter A on a green and baige background" 
-                    src="./public/appicon60@2x.png" />
-                  <h1>Arkham Bag</h1>
-                </div>
+          <div class="container_middle flex_row top_nav_bar">
+            <div class="flex_row" style="gap: var(--padding_small)">
+              <a href="#home">
+                <img class="logo_small"
+                  alt="The app's logo, a styalizes letter 'A' on a green and baige background" 
+                  src="./public/appicon60@2x.png" />
+              </a>
+              <h1>Arkham Bag</h1>
+            </div>
 
-                <div class="nav_menu flex_row" style="gap: var(--padding_medium)">
-                  <a href="#section_about" class="nav_item">About</a>
-                  <a href="#section_releases" class="nav_item">Release Notes</a>
-                  <a href="#section_legal" class="nav_item">Legal</a>
-                  <a href="#section_contact" class="nav_item">Contact</a>
-                </div>
+            <div class="nav_menu flex_row">
+              <a href="#section_about" class="nav_item">About</a>
+              <a href="#section_releases" class="nav_item">Release Notes</a>
+              <a href="#section_legal" class="nav_item">Legal</a>
+              <a href="#section_contact" class="nav_item">Contact</a>
+            </div>
 
-                <button class="btn_menu" id="btnMenu" onclick="openMobileMenu()"></button>
-                <button class="btn_close" id="btnClose" onclick="closeMobileMenu()"></button>
-              </nav>
-
-              <div data-type="MobileMenu" id="mobileMenu" class="container_mobile_menu">
-                <a href="#section_about" class="nav_item" onclick="closeMobileMenu()">About</a>
-                <a href="#section_releases" class="nav_item" onclick="closeMobileMenu()">Release Notes</a>
-                <a href="#section_legal" class="nav_item" onclick="closeMobileMenu()">Legal</a>
-                <a href="#section_contact" class="nav_item" onclick="closeMobileMenu()">Contact</a>
-              </div>
-
+            <button class="btn_menu" id="btnMenu" onclick="openMobileNav()"></button>
           </div>
 
-          <!----- ----- Hero content ----- ----->
+      </div>
+
+      <div id="mobileNav" class="container_stretched flex_column mobile_nav">
+
+        <div class="container_middle flex_row mobile_nav_bar divider_row">
+          <div class="flex_row" style="gap: var(--padding_small)">
+            <a href="#home">
+              <img class="logo_small"
+                alt="The app's logo, a styalizes letter 'A' on a green and baige background" 
+                src="./public/appicon60@2x.png" />
+            </a>
+            <h1>Arkham Bag</h1>
+          </div>
+
+          <button class="btn_close" id="btnClose" onclick="closeMobileNav()"></button>
+        </div>
+
+        <a href="#section_about" onclick="closeMobileNav()" class="mobile_item divider_row">About</a>
+        <a href="#section_releases" onclick="closeMobileNav()" class="mobile_item divider_row">Release Notes</a>
+        <a href="#section_legal" onclick="closeMobileNav()" class="mobile_item divider_row">Legal</a>
+        <a href="#section_contact" onclick="closeMobileNav()" class="mobile_item">Contact</a>
+
+      </div>
+
+        <!----- ----- Hero section ----- ----->
+        <div class="container_hero">
+
           <div class="container_stretched flex_column content_hero">
             <div class="container_middle flex_column" style="align-items: flex-start;  gap: var(--padding_small)">
               <a href="https://apps.apple.com/us/app/arkham/id1153235167?mt=8" target="_blank">
