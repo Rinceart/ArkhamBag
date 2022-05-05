@@ -41,14 +41,10 @@
 
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./landing_page.css" />
-    <link rel="stylesheet" href="./components/card_gallery.css" />
-    <link rel="stylesheet" href="./components/card_release_note.css" />
-
-    <script src="./js/landing_page.js"></script> 
 
     <link
       rel="shortcut icon"
-      href="./public/appicon60@2x.png"
+      href="./public/appIcon2022.png"
       type="icon/png"
       sizes="32x32"
     />
@@ -56,32 +52,30 @@
   </head>
 
   <body>
-    <div>
+    <div id="home" class="container_page flex_column" style="gap: 0px;">
 
-      <div id="home" class="container_page flex_column" style="gap: 0px;">
+      <!----- ----- Navigation ----- ----->
+      <div id="topNav" class="container_stretched flex_column top_nav">
 
-        <!----- ----- Navigation ----- ----->
-        <div id="topNav" class="container_stretched flex_column top_nav">
-
-          <div class="container_middle flex_row top_nav_bar">
-            <div class="flex_row" style="gap: var(--padding_small)">
-              <a href="#home">
-                <img class="logo_small"
-                  alt="The app's logo, a styalizes letter 'A' on a green and baige background" 
-                  src="./public/appicon60@2x.png" />
-              </a>
-              <h1>Arkham Bag</h1>
-            </div>
-
-            <div class="nav_menu flex_row">
-              <a href="#section_about" class="nav_item">About</a>
-              <a href="#section_releases" class="nav_item">Release Notes</a>
-              <a href="#section_legal" class="nav_item">Legal</a>
-              <a href="#section_contact" class="nav_item">Contact</a>
-            </div>
-
-            <button class="btn_menu" id="btnMenu" onclick="openMobileNav()"></button>
+        <div class="container_middle flex_row top_nav_bar">
+          <div class="flex_row" style="gap: var(--padding_small)">
+            <a href="#home">
+              <img class="icon_large"
+                alt="The app's logo, a styalizes letter 'A' on a green and baige background" 
+                src="./public/appIcon2022.png" />
+            </a>
+            <h1>Arkham Bag</h1>
           </div>
+
+          <div class="nav_menu flex_row">
+            <a href="#section_about" class="nav_item">About</a>
+            <a href="#section_releases" class="nav_item">Release Notes</a>
+            <a href="#section_legal" class="nav_item">Legal</a>
+            <a href="#section_contact" class="nav_item">Contact</a>
+          </div>
+
+          <button id="btnMenu" onclick="openMobileNav()"></button>
+        </div>
 
       </div>
 
@@ -90,14 +84,14 @@
         <div class="container_middle flex_row mobile_nav_bar divider_row">
           <div class="flex_row" style="gap: var(--padding_small)">
             <a href="#home">
-              <img class="logo_small"
+              <img class="icon_large"
                 alt="The app's logo, a styalizes letter 'A' on a green and baige background" 
-                src="./public/appicon60@2x.png" />
+                src="./public/appIcon2022.png" />
             </a>
             <h1>Arkham Bag</h1>
           </div>
 
-          <button class="btn_close" id="btnClose" onclick="closeMobileNav()"></button>
+          <button id="btnClose" onclick="closeMobileNav()"></button>
         </div>
 
         <a href="#section_about" onclick="closeMobileNav()" class="mobile_item divider_row">About</a>
@@ -107,237 +101,253 @@
 
       </div>
 
-        <!----- ----- Hero section ----- ----->
-        <div class="container_hero">
+      <!----- ----- Hero section ----- ----->
+      <div class="container_hero">
 
-          <div class="container_stretched flex_column content_hero">
-            <div class="container_middle flex_column" style="align-items: flex-start;  gap: var(--padding_small)">
-              <a href="https://apps.apple.com/us/app/arkham/id1153235167?mt=8" target="_blank">
-                <img
-                  alt="image"
-                  src="./public/downloadAppStoreLight.png"
-                  class="image_app_store"
-                />
-              </a>
-              <p style="color: white">Version 1.1 is available right now!</p>
-            </div>
+        <div class="container_stretched flex_column content_hero">
+          <div class="container_middle flex_column" style="align-items: flex-start;  gap: var(--padding_small)">
+            <a href="https://apps.apple.com/us/app/arkham/id1153235167?mt=8" target="_blank">
+              <img
+                alt="image"
+                src="./public/downloadAppStoreLight.png"
+                class="image_app_store"
+              />
+            </a>
+            <p style="color: white">Version 1.1 is available right now!</p>
+          </div>
+        </div>
+        
+        <div class="overlay_hero"></div>
+        <div class="overlay_hero overlay_tentacles"></div>
+
+      </div>
+
+      <!----- ----- About section starts ----- ----->
+      <div id="section_about" class="container_stretched light flex_column">
+        <div class="container_middle flex_column">
+
+          <div class="flex_column" style="gap: 0px">
+            <h2>About the App</h2>
+            <p class="label_description">
+              Arkham Bag is a chaos bag simulator for Arkham Horror: The Card
+              Game, based on H. P. Lovecraft&apos;s Cthulhu mythos. The app
+              provides a quick and easy way to simulate the game&apos;s chaos
+              bag, supporting game mechanics all the way to the Edge of the
+              Earth campaign. Arkham Bag also contains quick access to player
+              aid in the form of phase sequences with player windows.</p>
           </div>
           
-          <div class="hero_overlay"></div>
+          <div class="content_gallery flex_grid">
+            <div class="card_gallery shadow_normal">
+              <img
+                alt="Screenshot showing the bag view with various tokens"
+                src="./public/appImage01BagScreen.jpg"
+                class="card_gallery_image"
+              />
+            </div>
+
+            <div class="card_gallery shadow_normal">
+              <img
+                alt="Screenshot showing the phase seqence and player window overlay"
+                src="./public/appImage02SequenceOverlay.jpg"
+                class="card_gallery_image"
+              />
+            </div>
+
+            <div class="card_gallery shadow_normal">
+              <img
+                alt="Screenshot showing the bag selection screen"
+                src="./public/appImage03BagsList.jpg"
+                class="card_gallery_image"
+              />
+            </div>
+          </div>
 
         </div>
+      </div>
 
-        <!----- ----- Page body starts ----- ----->
-        <div class="flex_column" style="width: 100%; gap: 0px;">
+      <!----- ----- Release notes start ----- ----->
+      <div id="section_releases" class="container_stretched dark flex_column">
+        <div class="container_middle flex_column">
 
-          <!----- ----- About section starts ----- ----->
-          <div id="section_about" class="container_stretched light flex_column">
-            <div class="container_middle flex_column">
-
-              <div class="flex_column" style="gap: 0px">
-                <h2>About the App</h2>
-                <p class="label_description">
-                  Arkham Bag is a chaos bag simulator for Arkham Horror: The Card
-                  Game, based on H. P. Lovecraft&apos;s Cthulhu mythos. The app
-                  provides a quick and easy way to simulate the game&apos;s chaos
-                  bag, supporting game mechanics all the way to the Edge of the
-                  Earth campaign. Arkham Bag also contains quick access to player
-                  aid in the form of phase sequences with player windows.</p>
-              </div>
-              
-              <div class="content_gallery flex_grid">
-                <div class="card_gallery shadow_normal">
-                  <img
-                    alt="Screenshot showing the bag view with various tokens"
-                    src="./public/appImage01BagScreen.jpg"
-                    class="card_gallery_image"
-                  />
-                </div>
-
-                <div class="card_gallery shadow_normal">
-                  <img
-                    alt="Screenshot showing the phase seqence and player window overlay"
-                    src="./public/appImage02SequenceOverlay.jpg"
-                    class="card_gallery_image"
-                  />
-                </div>
-
-                <div class="card_gallery shadow_normal">
-                  <img
-                    alt="Screenshot showing the bag selection screen"
-                    src="./public/appImage03BagsList.jpg"
-                    class="card_gallery_image"
-                  />
-                </div>
-              </div>
-
-            </div>
+          <div class="flex_column" style="gap: 0px">
+            <h2>Release Notes</h2>
+            <p class="label_description"> Here, you can find the latest feature releases and their content.</p>
           </div>
-          <!----- ----- About section ends ----- ----->
 
-          <!----- ----- Release notes start ----- ----->
-          <div id="section_releases" class="container_stretched dark flex_column" >
-            <div class="container_middle flex_column">
+          <div class="content_release_notes flex_grid">
 
-              <div class="flex_column" style="gap: 0px">
-                <h2>Release Notes</h2>
-                <p class="label_description"> Here, you can find the latest feature releases and their content.</p>
+            <div class="card_release_note flex_column shadow_normal">
+              <div class="container_middle flex_row" style="gap: var(--padding_small)">
+                <img class="icon_large"
+                  alt="The app's logo, a styalizes letter 'A' on a green and baige background" 
+                  src="./public/appIcon2022.png" />
+                <h3>Version 2.0 - Coming in May, 2022!</h3>
               </div>
-
-              <div class="content_release_notes flex_grid">
-
-                <div class="card_release_note shadow_normal">
-                  <div class="card_release_note_header">
-                    <svg viewBox="0 0 1024 1024" class="icon">
-                      <path
-                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
-                      ></path>
-                    </svg>
-                    <h3>Version 2.0 - Coming in May, 2022!</h3>
-                  </div>
-                  <p>
-                    + Completely reworked user interface<br>
-                    + Added support for every expansion released to date<br>
-                    + Added a convenient list of phase sequences and player windows (swipe left on the bag screen)<br>
-                    + iPad support<br>
-                    + General improvements and bug fixes
-                  </p>
-                </div>
-
-                <div class="card_release_note shadow_normal">
-                  <div class="card_release_note_header">
-                    <svg viewBox="0 0 1024 1024" class="icon">
-                      <path
-                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
-                      ></path>
-                    </svg>
-                    <h3>Version 1.1 - 2019!</h3>
-                  </div>
-                  <p>
-                    + Added the missing Elder Thing token (Cthulhu still remains for fun)<br>
-                    + Added functionality to draw additional tokens at the same time<br>
-                    + Added functionality to quickly duplicate a bag in the list view (swipe left)<br>
-                    - Temporarily removed history (will add it back later)
-                  </p>
-                </div>
-
-                <div class="card_release_note shadow_normal">
-                  <div class="card_release_note_header">
-                    <svg viewBox="0 0 1024 1024" class="icon">
-                      <path
-                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
-                      ></path>
-                    </svg>
-                    <h3>Version 1.0 - 2017</h3>
-                  </div>
-                  <p>
-                    Arkham Bag is an event simulator for role playing and board games. 
-                    The app contains a large number of tokens, all with different values and symbols. 
-                    Assign events to these tokens, throw them into the “bag” in any combination, 
-                    and draw them one by one to simulate random events.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <!----- ----- Release notes ends ----- ----->
-
-          <!----- ----- Legal section start ----- ----->
-          <div id="section_legal" class="landing-page-container-legal">
-
-            <div class="flex_column" style="gap: 0px">
-              <h2>Legal</h2>
-              <p class="label_description"> Here, you can find our Terms and Conditions and our Privacy Policy.</p>
+              <p>
+                + Completely reworked user interface<br>
+                + Added support for every expansion released to date<br>
+                + Added a convenient list of phase sequences and player windows (swipe left on the bag screen)<br>
+                + iPad support<br>
+                + General improvements and bug fixes
+              </p>
             </div>
 
-            <div class="landing-page-content-legal">
-              <div class="collapsible-collepsable">
-                <button class="collapsible-button button collapsible_button">
-                  <span>Read the Terms and Conditions</span>
-                </button>
-                <div class="collapsible_content">
-                  <span><span>Text</span></span>
-                </div>
+            <div class="card_release_note flex_column shadow_normal">
+              <div class="container_middle flex_row" style="gap: var(--padding_small)">
+                <img class="icon_large"
+                  alt="The app's logo, a styalizes letter 'A' on a green and baige background" 
+                  src="./public/appIcon2017.png" />
+                <h3>Version 1.1 - 2019</h3>
               </div>
+              <p>
+                + Added the missing Elder Thing token (Cthulhu still remains for fun)<br>
+                + Added functionality to draw additional tokens at the same time<br>
+                + Added functionality to quickly duplicate a bag in the list view (swipe left)<br>
+                - Temporarily removed history (will add it back later)
+              </p>
             </div>
-          </div>
-          <!----- ----- Legal section ends ----- ----->
 
-          <!----- ----- Contact section start ----- ----->
-          <div id="section_contact" class="container_stretched dark flex_column">
-            <div class="container_middle flex_column">
-
-              <div class="flex_column" style="gap: 0px">
-                <h2>Contact</h2>
-                <p class="label_description"> Fill out the form below if you need to contact us! If you are reporting a bug, please make sure you are including steps to reproduce it.</p>
+            <div class="card_release_note flex_column shadow_normal">
+              <div class="container_middle flex_row" style="gap: var(--padding_small)">
+                <img class="icon_large"
+                  alt="The app's logo, a styalizes letter 'A' on a green and baige background" 
+                  src="./public/appIcon2017.png" />
+                <h3>Version 1.0 - 2017</h3>
               </div>
-              
-              <form class="container_contact flex_column">
-                <div class="landing-page-input-name">
-                  <span>
-                    <span class="landing-page-text09">*</span>
-                    <span>Your name</span>
-                  </span>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Jane Doe"
-                    class="landing-page-input-name1 input"
-                  />
-                </div>
-                <div class="landing-page-input-address">
-                  <span>
-                    <span class="landing-page-text11">*</span>
-                    <span class="landing-page-text12">Your email address</span>
-                  </span>
-                  <input
-                    type="text"
-                    required
-                    placeholder="your.name@company.com"
-                    class="landing-page-input-email input"
-                  />
-                </div>
-                <div class="landing-page-label-subject">
-                  <span><span class="landing-page-text13">Subject</span></span>
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    class="landing-page-input-subject input"
-                  />
-                </div>
-                <div class="landing-page-container1">
-                  <span>
-                    <span class="landing-page-text14">You message</span>
-                  </span>
-                  <textarea
-                    placeholder="Type your message here..."
-                    class="landing-page-textarea textarea"
-                  ></textarea>
-                </div>
-                <button class="landing-page-button button">
-                  <span class="landing-page-text15">
-                    <span>Send</span>
-                    <span class="landing-page-text17"></span>
-                    <span></span>
-                  </span>
-                </button>
-              </form>
+              <p>
+                Arkham Bag is an event simulator for role playing and board games. 
+                The app contains a large number of tokens, all with different values and symbols. 
+                Assign events to these tokens, throw them into the “bag” in any combination, 
+                and draw them one by one to simulate random events.
+              </p>
             </div>
-          </div>
-          <!----- ----- Contact section ends ----- ----->
-        </div>
 
-        <!----- ----- FOOTER ----- ----->
-        <div class="landing-page-footer">
-          <div class="content_footer">
-            <h4 class="landing-page-label-logo">Arkham Bag</h4>
-            <p class="landing-page-label-copyright">
-              Copyright © 2022, Gergely E. Kovacs
-            </p>
           </div>
         </div>
       </div>
+
+      <!----- ----- Legal section start ----- ----->
+      <div id="section_legal" class="container_stretched light flex_column">
+
+        <div class="flex_column" style="gap: 0px">
+          <h2>Legal</h2>
+          <p class="label_description"> Here, you can find our Terms and Conditions and our Privacy Policy.</p>
+        </div>
+
+        <div class="flex_column">
+          
+          <div>
+            <button class="collapsible">Terms and Conditions</button>
+            <div class="content_collapsible">
+              <p>
+                timeline: nagyon jó ötlet, hogy minden pont vizuálisan egymásból következik és kapcsolatban áll az előzővel, tök jól néz ki!
+                nekem egy kicsit sok a szín viszont: már látszik hogy a végén a narancs is újra előkerült kicsit más árnyalatban.
+                lehet hogy a kék-zöld-lila mentén gondolkodnék (meg még a szürke is beleillik), és egyfajta színátmenetet csinálnék ezek között, 
+                kihagyva a piros-narancsot, egy második verziónak. de ezen kívül ha még lesz a tetején is valami, máson nem változtatnék, 
+                ezt is csak megnézném hogy néz ki emellett a verzió mellett.
+              </p>
+            </div> 
+          </div>
+
+          <div>
+            <button class="collapsible">Privacy Policy</button>
+            <div class="content_collapsible">
+              <p>
+                timeline: nagyon jó ötlet, hogy minden pont vizuálisan egymásból következik és kapcsolatban áll az előzővel, tök jól néz ki!
+                nekem egy kicsit sok a szín viszont: már látszik hogy a végén a narancs is újra előkerült kicsit más árnyalatban.
+                lehet hogy a kék-zöld-lila mentén gondolkodnék (meg még a szürke is beleillik), és egyfajta színátmenetet csinálnék ezek között, 
+                kihagyva a piros-narancsot, egy második verziónak. de ezen kívül ha még lesz a tetején is valami, máson nem változtatnék, 
+                ezt is csak megnézném hogy néz ki emellett a verzió mellett.
+              </p>
+            </div> 
+          </div>
+
+        </div>
+      </div>
+
+      <!----- ----- Contact section start ----- ----->
+      <div id="section_contact" class="container_stretched dark flex_column">
+        <div class="container_middle flex_column">
+
+          <div class="flex_column" style="gap: 0px">
+            <h2>Contact</h2>
+            <p class="label_description"> Fill out the form below if you need to contact us! If you are reporting a bug, please make sure you are including steps to reproduce it.</p>
+          </div>
+          
+          <form class="container_contact flex_column">
+            <div class="landing-page-input-name">
+              <span>
+                <span class="landing-page-text09">*</span>
+                <span>Your name</span>
+              </span>
+              <input
+                type="text"
+                required
+                placeholder="Jane Doe"
+                class="landing-page-input-name1 input"
+              />
+            </div>
+            <div class="landing-page-input-address">
+              <span>
+                <span class="landing-page-text11">*</span>
+                <span class="landing-page-text12">Your email address</span>
+              </span>
+              <input
+                type="text"
+                required
+                placeholder="your.name@company.com"
+                class="landing-page-input-email input"
+              />
+            </div>
+            <div class="landing-page-label-subject">
+              <span><span class="landing-page-text13">Subject</span></span>
+              <input
+                type="text"
+                placeholder="Subject"
+                class="landing-page-input-subject input"
+              />
+            </div>
+            <div class="landing-page-container1">
+              <span>
+                <span class="landing-page-text14">You message</span>
+              </span>
+              <textarea
+                placeholder="Type your message here..."
+                class="landing-page-textarea textarea"
+              ></textarea>
+            </div>
+            <button class="landing-page-button button">
+              <span class="landing-page-text15">
+                <span>Send</span>
+                <span class="landing-page-text17"></span>
+                <span></span>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!----- ----- Footer ----- ----->
+      <div class="container_stretched black flex_column">
+        <div class="content_footer flex_row">
+          
+          <div class="flex_row" style="gap: 5px">
+            <img class="icon_small"
+              alt="The app's logo, a styalizes letter 'A' on a green and baige background" 
+              src="./public/appIcon2022.png" />
+            <h4>Arkham Bag</h4>
+          </div>
+
+          <p style="color: white;">Copyright © 2022, Gergely E. Kovacs</p>
+        </div>
+      </div>
+
     </div>
+
   </body>
+
+  <script src="./js/landing_page.js"></script>
+  <script src="./js/collapsible.js"></script>
+
 </html>
