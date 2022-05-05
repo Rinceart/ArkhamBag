@@ -8,39 +8,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-      html {  line-height: 1.15;}
-      body {  margin: 0;}
-      * {  box-sizing: border-box;  
-        border-width: 0;  
-        border-style: solid;}
-        button,input,optgroup,select,textarea {  font-family: inherit;  
-          font-size: 100%;  
-          line-height: 1.15;  
-          margin: 0;}
-          button,select {  
-            text-transform: none;}
-            button,[type="button"],[type="reset"],[type="submit"] {  
-              -webkit-appearance: button;}
-              button::-moz-focus-inner,
-              [type="button"]::-moz-focus-inner,
-              [type="reset"]::-moz-focus-inner,
-              [type="submit"]::-moz-focus-inner {  
-                border-style: none;  
-                padding: 0;}
-                button:-moz-focus,
-                [type="button"]:-moz-focus,
-                [type="reset"]:-moz-focus,
-                [type="submit"]:-moz-focus {  
-                  outline: 1px dotted ButtonText;}
-                  a {  color: inherit;  
-                    text-decoration: inherit;}
-                    input {  padding: 2px 4px;}
-                    img {  display: block;}
-    </style>
-
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./landing_page.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link
       rel="shortcut icon"
@@ -74,7 +45,7 @@
             <a href="#section_contact" class="nav_item">Contact</a>
           </div>
 
-          <button id="btnMenu" onclick="openMobileNav()"></button>
+          <button id="btnMenu" onclick="openMobileNav()" style="min-width: var(--padding_large);"></button>
         </div>
 
       </div>
@@ -83,7 +54,7 @@
 
         <div class="container_middle flex_row mobile_nav_bar divider_row">
           <div class="flex_row" style="gap: var(--padding_small)">
-            <a href="#home">
+            <a href="#home" onclick="closeMobileNav()">
               <img class="icon_large"
                 alt="The app's logo, a styalizes letter 'A' on a green and baige background" 
                 src="./public/appIcon2022.png" />
@@ -91,7 +62,7 @@
             <h1>Arkham Bag</h1>
           </div>
 
-          <button id="btnClose" onclick="closeMobileNav()"></button>
+          <button id="btnClose" onclick="closeMobileNav()" style="min-width: var(--padding_large);"></button>
         </div>
 
         <a href="#section_about" onclick="closeMobileNav()" class="mobile_item divider_row">About</a>
@@ -126,7 +97,7 @@
       <div id="section_about" class="container_stretched light flex_column">
         <div class="container_middle flex_column">
 
-          <div class="flex_column" style="gap: 0px">
+          <div class="flex_column" style="gap: var(--padding_small)">
             <h2>About the App</h2>
             <p class="label_description">
               Arkham Bag is a chaos bag simulator for Arkham Horror: The Card
@@ -170,7 +141,7 @@
       <div id="section_releases" class="container_stretched dark flex_column">
         <div class="container_middle flex_column">
 
-          <div class="flex_column" style="gap: 0px">
+          <div class="flex_column" style="gap: var(--padding_small)">
             <h2>Release Notes</h2>
             <p class="label_description"> Here, you can find the latest feature releases and their content.</p>
           </div>
@@ -229,40 +200,110 @@
 
       <!----- ----- Legal section start ----- ----->
       <div id="section_legal" class="container_stretched light flex_column">
+        <div class="container_middle flex_column">
 
-        <div class="flex_column" style="gap: 0px">
-          <h2>Legal</h2>
-          <p class="label_description"> Here, you can find our Terms and Conditions and our Privacy Policy.</p>
-        </div>
-
-        <div class="flex_column">
-          
-          <div>
-            <button class="collapsible">Terms and Conditions</button>
-            <div class="content_collapsible">
-              <p>
-                timeline: nagyon jó ötlet, hogy minden pont vizuálisan egymásból következik és kapcsolatban áll az előzővel, tök jól néz ki!
-                nekem egy kicsit sok a szín viszont: már látszik hogy a végén a narancs is újra előkerült kicsit más árnyalatban.
-                lehet hogy a kék-zöld-lila mentén gondolkodnék (meg még a szürke is beleillik), és egyfajta színátmenetet csinálnék ezek között, 
-                kihagyva a piros-narancsot, egy második verziónak. de ezen kívül ha még lesz a tetején is valami, máson nem változtatnék, 
-                ezt is csak megnézném hogy néz ki emellett a verzió mellett.
-              </p>
-            </div> 
+          <div class="flex_column" style="gap: var(--padding_small)">
+            <h2>Legal</h2>
+            <p class="label_description"> Here, you can find our <b>Terms and Conditions</b> and our <b>Privacy Policy</b>. Click on the buttons below to expand their content.</p>
           </div>
 
-          <div>
-            <button class="collapsible">Privacy Policy</button>
-            <div class="content_collapsible">
-              <p>
-                timeline: nagyon jó ötlet, hogy minden pont vizuálisan egymásból következik és kapcsolatban áll az előzővel, tök jól néz ki!
-                nekem egy kicsit sok a szín viszont: már látszik hogy a végén a narancs is újra előkerült kicsit más árnyalatban.
-                lehet hogy a kék-zöld-lila mentén gondolkodnék (meg még a szürke is beleillik), és egyfajta színátmenetet csinálnék ezek között, 
-                kihagyva a piros-narancsot, egy második verziónak. de ezen kívül ha még lesz a tetején is valami, máson nem változtatnék, 
-                ezt is csak megnézném hogy néz ki emellett a verzió mellett.
-              </p>
-            </div> 
-          </div>
+          <div class="flex_column">
+            
+            <div>
+              <button class="collapsible shadow_normal">Terms and Conditions</button>
+              <div class="container_collapsible">
+                <div class="flex_column content_collapsible">
+                  <p class="p_end">Last updated May 4th, 2022.</p>
 
+                  <h3>Terms</h3>
+                  <p class="p_end">By accessing the Arkham Bag app (service) built by Gergely Kovacs (we, us, our), you are agreeing to be bound by our terms and conditions, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing the service. The materials contained in Arkham Bag are protected by applicable copyright and trademark law.</p>
+
+                  <h3>License</h3>
+                  <p>Permission is granted to temporarily download Arkham Bag for personal, non-commercial use only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                  <ul>
+                    <li>modify or copy the materials;</li>
+                    <li>the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+                    <li>attempt to decompile or reverse engineer any software contained in Arkham Bag;</li>
+                    <li>remove any copyright or other proprietary notations from the materials; or</li>
+                    <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+                  </ul>
+                  <p class="p_end">This license shall automatically terminate if you violate any of these restrictions and may be terminated by Gergely Kovacs at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</p>
+
+                  <h3>Disclaimer</h3>
+                  <p class="p_end">The materials within Arkham Bag are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+
+                  <h3>Limitations</h3>
+                  <p>In no event shall Gergely Kovacs or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use Arkham Bag, even if we or a representative authorized by us has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</p>
+                  <p class="p_end">Arkham Bag may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+
+                  <h3>Modifications</h3>
+                  <p class="p_end">Gergely Kovacs may revise these terms and conditions for Arkham Bag at any time without notice. By using the service you are agreeing to be bound by the then current version of these terms and conditions.</p>
+
+                  <h3>Applicable Laws</h3>
+                  <p class="p_end">These terms and conditions are governed by and construed in accordance with the laws of Hungary and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
+
+                  <h3>Information We Collect</h3>
+                  <p class="p_end">We do not collect any information which identifies or allows us to identify you, unless you voluntarily provide us with such data (for example, when contacting us or leaving feedback). In particular, we do not collect your name, e-mail, telephone number, or any persistent online identifiers.</p>
+
+                </div>
+              </div> 
+            </div>
+
+            <div>
+              <button class="collapsible shadow_normal">Privacy Policy</button>
+              <div class="container_collapsible">
+                <div class="flex_column content_collapsible">
+                  <p class="p_end">Last updated May 4th, 2022.</p>
+
+                  <p>Kovacs (we, us, our) has built the Arkham Bag app (service) as a free service. The SERVICE is provided by us at no cost and is intended for use as is.</p>
+                  <p>This section is to inform you regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.</p>
+                  <p>If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
+                  <p class="p_end">The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible on this website unless otherwise defined in this Privacy Policy.</p>
+
+                  <h3>Information Collection and Use</h3>
+                  <p>We do not collect any information which identifies or allows us to identify you, unless you voluntarily provide us with such data (for example, when contacting us or leaving feedback). In particular, we do not collect your name, e-mail, telephone number, or any persistent online identifiers.</p>
+                  <p>The app, however, does use third party services that may collect information that can be used to identify you.</p>
+                  <p>Link to privacy policy of third party service providers used by the app.</p>
+                  <ul class="p_end">
+                    <li>Ironsource Ltd.</li>
+                  </ul>
+
+                  <h3>Log Data</h3>
+                  <p class="p_end">We want to inform you that whenever you use our Service, in the case of an error in the app, we collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
+
+                  <h3>Cookies</h3>
+                  <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.</p>
+                  <p class="p_end">This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.</p>
+
+                  <h3>Service Providers</h3>
+                  <p>We may employ third-party companies and individuals due to the following reasons:</p>
+                  <ul class="p_end">
+                    <li>To facilitate our Service;</li>
+                    <li>To provide the Service on our behalf;</li>
+                    <li>To perform Service-related services; or</li>
+                    <li>To assist us in analyzing how our Service is used.</li>
+                    <li>We want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</li>
+                  </ul>
+
+                  <h3>Security</h3>
+                  <p class="p_end">We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+
+                  <h3>Links to Other Sites</h3>
+                  <p class="p_end">This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+
+                  <h3>Children’s Privacy</h3>
+                  <p class="p_end">These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do the necessary actions.</p>
+
+                  <h3>Changes to This Privacy Policy</h3>
+                  <p class="p_end">We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
+
+                  <h3>Contact Us</h3>
+                  <p class="p_end">If you have any questions or suggestions about my Privacy Policy, please use the contact section of this page.</p>
+                </div>
+              </div> 
+            </div>
+
+          </div>
         </div>
       </div>
 
@@ -270,61 +311,65 @@
       <div id="section_contact" class="container_stretched dark flex_column">
         <div class="container_middle flex_column">
 
-          <div class="flex_column" style="gap: 0px">
+          <div class="flex_column" style="gap: var(--padding_small)">
             <h2>Contact</h2>
-            <p class="label_description"> Fill out the form below if you need to contact us! If you are reporting a bug, please make sure you are including steps to reproduce it.</p>
+            <p class="label_description">Fill out the form below if you need to contact us! If you are reporting a bug, please make sure you are including steps to reproduce it.</p>
           </div>
           
-          <form class="container_contact flex_column">
-            <div class="landing-page-input-name">
-              <span>
-                <span class="landing-page-text09">*</span>
-                <span>Your name</span>
-              </span>
+          <div class="container_contact flex_column">
+
+            <div class="content_input">
+              <div class="flex_row" style="gap: 5px;">
+                <p class="asterix">*</p>
+                <p>Your name</p>
+              </div>
               <input
                 type="text"
                 required
-                placeholder="Jane Doe"
-                class="landing-page-input-name1 input"
+                placeholder="Prof. Henry Armitage"
+                class="input_field"
               />
             </div>
-            <div class="landing-page-input-address">
-              <span>
-                <span class="landing-page-text11">*</span>
-                <span class="landing-page-text12">Your email address</span>
-              </span>
+
+            <div class="content_input">
+              <div class="flex_row" style="gap: 5px;">
+                <p class="asterix">*</p>
+                <p>Your email address</p>
+              </div>
               <input
                 type="text"
                 required
-                placeholder="your.name@company.com"
-                class="landing-page-input-email input"
+                placeholder="henry.armitage@miscatonic.edu"
+                class="input_field"
               />
             </div>
-            <div class="landing-page-label-subject">
-              <span><span class="landing-page-text13">Subject</span></span>
+
+            <div class="content_input">
+              <p>Subject</p>
               <input
                 type="text"
-                placeholder="Subject"
-                class="landing-page-input-subject input"
+                placeholder="Concerning Dunwich"
+                class="input_field"
               />
             </div>
-            <div class="landing-page-container1">
-              <span>
-                <span class="landing-page-text14">You message</span>
-              </span>
+
+            <div class="content_input">
+              <div class="flex_row" style="gap: 5px;">
+                <p class="asterix">*</p>
+                <p>Your message</p>
+              </div>
               <textarea
-                placeholder="Type your message here..."
-                class="landing-page-textarea textarea"
-              ></textarea>
+                required
+                placeholder="Those Whateleys meant to let them in..."
+                class="input_field"></textarea>
             </div>
-            <button class="landing-page-button button">
-              <span class="landing-page-text15">
-                <span>Send</span>
-                <span class="landing-page-text17"></span>
-                <span></span>
-              </span>
+
+            <button class="shadow_normal">
+              Send
             </button>
-          </form>
+
+          </div>
+
         </div>
       </div>
 
@@ -336,10 +381,17 @@
             <img class="icon_small"
               alt="The app's logo, a styalizes letter 'A' on a green and baige background" 
               src="./public/appIcon2022.png" />
-            <h4>Arkham Bag</h4>
+            <h4 class="text_footer">Arkham Bag</h4>
           </div>
+            
+          <p style="color: white; font-size: 14px;">Copyright © 2022, Gergely E. Kovacs</p>
 
-          <p style="color: white;">Copyright © 2022, Gergely E. Kovacs</p>
+          <form action="https://www.paypal.com/donate" method="post" target="_top">
+            <input type="hidden" name="hosted_button_id" value="8AUGMNEMT3R7Q" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_HU/i/scr/pixel.gif" width="1" height="1" />
+          </form>
+
         </div>
       </div>
 
