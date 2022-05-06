@@ -56,7 +56,7 @@ h4 {
   color: var(--color_dark_green);
 }
 
-p {
+p, li {
   font-size: 18px;
   font-family: Helvetica, sans-serif;
   font-weight: 300;
@@ -74,12 +74,13 @@ a {
 button {
   width: auto;
   min-width: calc(var(--padding_large) * 3);
-  height: var(--padding_large);
+  height: var(--size_button_large);
   cursor: pointer;
   font-size: 18px;
   font-family: Helvetica, sans-serif;
   font-weight: 600;
   text-align: center;
+  color: var(--color_dark_green);
   padding: var(--padding_small);
   border-radius: var(--corner_radius);
   background-color: var(--color_baige_light);

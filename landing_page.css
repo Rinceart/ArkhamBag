@@ -1,5 +1,7 @@
 :root {
   --size_header: 80px;
+  --size_button_small: 46px;
+  --size_button_large: 60px;
   --padding_small: 15px;
   --padding_medium: 30px;
   --padding_large: 60px;
@@ -133,6 +135,7 @@
 
 #btnMenu {
   display: none;
+  min-width: var(--size_button_small);
   background: url(./public/iconMenu.png);
   background-repeat: no-repeat;
   background-size: 24px;
@@ -140,6 +143,7 @@
 }
 
 #btnClose {
+  min-width: var(--size_button_small);
   background: url(./public/iconClose.png);
   background-repeat: no-repeat;
   background-size: 32px;
@@ -185,7 +189,7 @@
   text-decoration: none;
 }
 
-/* ----- ----- Page content ----- ----- */
+/* ----- ----- About Section ----- ----- */
 .content_gallery {
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -205,13 +209,14 @@
   border-radius: var(--corner_radius);
 }
 
+/* ----- ----- Release Notes ----- ----- */
 .content_release_notes {
   grid-template-columns: 1fr 1fr;
 }
 
 .card_release_note {
   width: 100%;
-  min-width: 260px;
+  height: 100%;
   position: relative;
   padding: var(--padding_medium);
   border-radius: var(--corner_radius);
@@ -221,7 +226,7 @@
   background-color: var(--color_baige_light);
 }
 
-/* ----- ----- Collapsible ----- ----- */
+/* ----- ----- Legal section / collapsibles ----- ----- */
 .collapsible {
   width: 100%;
   height: auto;
@@ -357,10 +362,11 @@
   }
 
   #btnMenu {
-    width: auto;
+    width: var(--size_button_small);
+  }
+  
+  #btnClose {
+    width: var(--size_button_small);
   }
 
-  #btnClose {
-    width: auto;
-  }
 }
