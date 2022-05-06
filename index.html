@@ -326,6 +326,7 @@
                 <p>Your name</p>
               </div>
               <input
+                id="inp_name"
                 type="text"
                 name="name"
                 required
@@ -340,6 +341,7 @@
                 <p>Your email address</p>
               </div>
               <input
+                id="inp_email"
                 type="email"
                 name="email"
                 required
@@ -364,8 +366,9 @@
                 <p>Your message</p>
               </div>
               <textarea
-                required
+                id="inp_message"
                 name="message"
+                required
                 placeholder="Those Whateleys meant to let them in..."
                 class="input_field"></textarea>
             </div>
@@ -378,8 +381,12 @@
               data-error-callback="onError">
             </div>
 
-            <button type="submit" class="shadow_normal">
-              Send Message
+            <button 
+              id="btn_submit"
+              type="submit" 
+              class="shadow_normal" 
+              disabled>
+              Fill out the form first
             </button>
 
             <p id="contant_message"></p>

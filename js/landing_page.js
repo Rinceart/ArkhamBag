@@ -32,3 +32,17 @@ function closeMobileNav() {
   var mobileNav = document.getElementById("mobileNav");
   mobileNav.style.display = "none";
 }
+
+document.addEventListener('keyup', function() {
+    var inpName = document.getElementById("inp_name").value;
+    var inpEmail = document.getElementById("inp_email").value;
+    var inpMessage = document.getElementById("inp_message").value;
+    
+    if (inpName != '' &&
+        inpEmail != '' &&
+        inpMessage != '') {
+          document.getElementById("btn_submit").disabled = false;
+    } else {
+      document.getElementById("btn_submit").disabled = true;
+    }
+})
