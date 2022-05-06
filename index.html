@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
     <link
       rel="shortcut icon"
       href="./public/appIcon2022.png"
@@ -316,7 +318,7 @@
             <p class="label_description">Fill out the form below if you need to contact us! If you are reporting a bug, please make sure you are including steps to reproduce it.</p>
           </div>
           
-          <div class="container_contact flex_column">
+          <form class="container_contact flex_column" action="https://submit-form.com/QN87uiS7">
 
             <div class="content_input">
               <div class="flex_row" style="gap: 5px;">
@@ -325,7 +327,8 @@
               </div>
               <input
                 type="text"
-                required
+                name="name"
+                required=""
                 placeholder="Prof. Henry Armitage"
                 class="input_field"
               />
@@ -338,7 +341,8 @@
               </div>
               <input
                 type="email"
-                required
+                name="email"
+                required=""
                 placeholder="henry.armitage@miscatonic.edu"
                 class="input_field"
               />
@@ -348,6 +352,7 @@
               <p>Subject</p>
               <input
                 type="text"
+                name="subject"
                 placeholder="Concerning Dunwich"
                 class="input_field"
               />
@@ -359,16 +364,35 @@
                 <p>Your message</p>
               </div>
               <textarea
-                required
+                required=""
+                name="message"
                 placeholder="Those Whateleys meant to let them in..."
                 class="input_field"></textarea>
             </div>
 
-            <button class="shadow_normal">
-              Send
+            <input name="arkham_id" type="text" placeholder="Important!" class="input_field" autocomplete="off" style="display: none"/>
+            
+            <script type="text/javascript">
+              hcaptcha.render('captcha-1', {
+                sitekey: 'your_site_key',
+                theme: 'dark',
+                'error-callback': 'onError',
+              });
+            </script>
+
+            <div
+              class="h-captcha"
+              data-sitekey="e37373a0-ea5d-45a9-8d86-2111dd629edc"
+              data-error-callback="onError">
+            </div>
+
+            <button type="submit" class="shadow_normal">
+              Send Message
             </button>
 
-          </div>
+            <p id="contant_message"></p>
+
+          </form>
 
         </div>
       </div>
@@ -388,8 +412,8 @@
 
           <form action="https://www.paypal.com/donate" method="post" target="_top">
             <input type="hidden" name="hosted_button_id" value="8AUGMNEMT3R7Q" />
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-            <img alt="" border="0" src="https://www.paypal.com/en_HU/i/scr/pixel.gif" width="1" height="1" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" src="https://www.paypal.com/en_HU/i/scr/pixel.gif" width="1" height="1" />
           </form>
 
         </div>
