@@ -64,3 +64,7 @@ function setSubmitButton() {
     document.getElementById("btn_submit").innerText = 'Fill out the form first';
   }
 }
+
+function captchaError() {
+  console.log("Something went wrong with hCaptcha...");
+}

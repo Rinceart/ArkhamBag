@@ -111,7 +111,7 @@
 }
 
 .mobile_nav_bar {
-  height: var(--size_header);
+  height: calc(var(--size_header) + 1px); /* +1 for bottom border */
   justify-content: space-between;
   padding-left: var(--padding_medium);
   padding-right: var(--padding_medium);
@@ -123,7 +123,7 @@
   padding-left: var(--padding_medium);
   padding-right: var(--padding_medium);
   line-height: var(--size_header);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color_baige_light);
   background-color: var(--color_gray_dark);
 }
@@ -359,6 +359,30 @@
 
   button {
     width: 100%;
+  }
+
+  .container_stretched {
+    padding-left: var(--padding_small);
+    padding-right: var(--padding_small);
+  }
+
+  .top_nav {
+    padding-left: var(--padding_small);
+    padding-right: var(--padding_small);
+  }
+
+  .container_stretched.mobile_nav {
+    padding: 0px;
+  }
+
+  .mobile_nav_bar {
+    padding-left: var(--padding_small);
+    padding-right: var(--padding_small);
+  }
+  
+  .mobile_item {
+    padding-left: var(--padding_small);
+    padding-right: var(--padding_small);
   }
 
   #btnMenu {
