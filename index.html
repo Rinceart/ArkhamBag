@@ -318,7 +318,7 @@
             <p class="label_description">Fill out the form below if you need to contact us! If you are reporting a bug, please make sure you are including steps to reproduce it.</p>
           </div>
           
-          <form class="container_contact flex_column" action="https://submit-form.com/QN87uiS7">
+          <form class="container_contact flex_column" action="https://submit-form.com/QN87uiS7" target="_blank">
 
             <div class="content_input">
               <div class="flex_row" style="gap: 5px;">
@@ -328,7 +328,7 @@
               <input
                 type="text"
                 name="name"
-                required=""
+                required
                 placeholder="Prof. Henry Armitage"
                 class="input_field"
               />
@@ -342,7 +342,7 @@
               <input
                 type="email"
                 name="email"
-                required=""
+                required
                 placeholder="henry.armitage@miscatonic.edu"
                 class="input_field"
               />
@@ -364,21 +364,13 @@
                 <p>Your message</p>
               </div>
               <textarea
-                required=""
+                required
                 name="message"
                 placeholder="Those Whateleys meant to let them in..."
                 class="input_field"></textarea>
             </div>
 
             <input name="arkham_id" type="text" placeholder="Important!" class="input_field" autocomplete="off" style="display: none"/>
-            
-            <script type="text/javascript">
-              hcaptcha.render('captcha-1', {
-                sitekey: 'your_site_key',
-                theme: 'dark',
-                'error-callback': 'onError',
-              });
-            </script>
 
             <div
               class="h-captcha"
