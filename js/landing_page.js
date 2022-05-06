@@ -1,3 +1,5 @@
+var capthcaFilled = false;
+
 document.addEventListener('DOMContentLoaded', function() {
   window.onscroll = function() {userScroll()};
 
@@ -40,9 +42,17 @@ document.addEventListener('keyup', function() {
     
     if (inpName != '' &&
         inpEmail != '' &&
-        inpMessage != '') {
+        inpMessage != '' &&
+        capthcaFilled === true) {
           document.getElementById("btn_submit").disabled = false;
+          document.getElementById("btn_submit").innerText = 'Submit';
     } else {
       document.getElementById("btn_submit").disabled = true;
+      document.getElementById("btn_submit").innerText = 'Fill out the form first';
     }
 })
+
+function correctCaptcha() {
+  capthcaFilled = true;
+  console.log("Received correct captcha");
+}
